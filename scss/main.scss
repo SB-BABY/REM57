@@ -1,12 +1,16 @@
 // ИМПОРТ СТИЛЕЙ ИЗ ДРУГИХ ЧАСТЕЙ
 // Base - Порядок такой: Сбросили -> Определили переменные -> Используем переменные в проекте
-@import "./base/reset";
-@import "./base/vars";
-@import "./base/base";
+// размещаем   все импорты
+@import "./base/fonts", "./base/media", "./base/mixins", "./base/reset", "./base/vars",
+    "./base/globals", "./base/utils";
+
 // Base
 
 // MIXIN
-@import './base/mixins';
+// @import './base/mixins';
 // MIXIN
 
 // BLOCK
+@import "./base/button";
+@import "./block/header";
+@import "./block/mobile-overlay";

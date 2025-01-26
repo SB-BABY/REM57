@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="./image/favicon.ico" />
     <!-- CSS -->
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <!-- CSS -->
     <title>TEMPLATE</title>
 </head>
@@ -14,6 +15,52 @@
 
     <!-- HEADER -->
     <header class="header">
+
+        <div class="container header__container ">
+            <div class="header__top">
+                <div class="header__logo">
+                    <a href="" class="header__logo-link">
+                        <img src="./image/HEADER/LOGO.png" alt="Логотип" class="header__logo-img">
+                    </a>
+                </div>
+
+                <div class="header__info hidden-mobile">
+                    <div class="header__info-text">
+                        <span class="bold">
+                            г. Орёл, ул. Комсомольская, д. 65
+                        </span>
+
+                        <span>
+                            Пн-Пт: 10-19; Сб-Вс: 10-15;
+                        </span>
+                    </div>
+
+                    <a href="tel:+79200875956" class="header__info-btn button">+7(920)087-59-56</a>
+                </div>
+
+                <!-- БУРГЕР КНОПКА -->
+                <button class="header__burger-button burger-button visible-mobile" type="button"
+                    onclick="mobileOverlay.showModal()">
+                    <span class="visually-hidden">Open navigation menu</span>
+                </button>
+                <!-- БУРГЕР КНОПКА -->
+
+
+            </div>
+
+            <nav class="header__nav hidden-mobile">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Главная</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Услуги</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Цены</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">О нас</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+
 
     </header>
     <!-- HEADER -->
@@ -29,6 +76,39 @@
 
     </footer>
     <!-- FOOTER -->
+
+    <!-- START BURGER -->
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+        <form class="mobile-overlay__close-button-wrapper" method="dialog">
+            <button class="mobile-overlay__close-button cross-button" type="submit">
+                <span class="visually-hidden">Close navigation menu</span>
+            </button>
+        </form>
+        <div class="mobile-overlay__body">
+            <ul class="mobile-overlay__list dropdown__mobile" id="dropdown__mobile">
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="services.html">Услуги</a>
+                </li>
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="contact.html">Контакты</a>
+                </li>
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="documents.html">Документы</a>
+                </li>
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="about.html">О нас</a>
+                </li>
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="korupzia.html">Противодействие коррупции</a>
+                </li>
+
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link open-modal" href="/">Связаться</a>
+                </li>
+            </ul>
+        </div>
+    </dialog>
+    <!-- END BURGER -->
 
     <!-- SCRIPT -->
     <script src="./script/main.js"></script>
