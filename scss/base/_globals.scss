@@ -11,6 +11,14 @@
 	display: none;
 }
 
+.bold{
+	font-weight: 700;
+}
+
+.green{
+	color: var(--color-accent);
+}
+
 // СКРОЛЛБАР
 * {
 	// scrollbar-width: 100px;
