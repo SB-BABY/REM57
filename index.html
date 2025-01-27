@@ -67,8 +67,11 @@
 
     <!-- MAIN -->
     <main class="main">
+        <!-- hero -->
         <section class="hero">
             <div class="hero-slider">
+
+
                 <div class="hero-slide active-hero-slide" style="background-image: url('./image/HERO/1-bg.png');"></div>
                 <div class="hero-slide" style="background-image: url('./image/HERO/2-bg.jpg');"></div>
                 <div class="hero-slide" style="background-image: url('./image/HERO/3-bg.jpg');"></div>
@@ -100,8 +103,7 @@
                             pattern="[7-8]{1}[0-9]{10}" required>
 
                         <div class="hero__form-check">
-                            <input type="checkbox" name="intensive-courses" id="courses" required
-                                >
+                            <input type="checkbox" name="intensive-courses" id="courses" required>
                             <label for="courses">Я согласен с политикой обработки персональных данных</label>
                         </div>
 
@@ -112,6 +114,37 @@
                 </form>
             </div>
         </section>
+        <!-- hero -->
+
+        <!-- advantages -->
+        <section class="advantages">
+            <div class="container advantages__container">
+                <ul class="advantages__list">
+                    <li class="advantages__item advantages__item-one">
+                        <img src="./image/ICON/like.png" alt="Бесплатная диагностика" class="advantages__item-img">
+                        <p class="advantages__item-title">
+                            Бесплатная диагностика!
+                        </p>
+                    </li>
+
+                    <li class="advantages__item advantages__item-two">
+                        <img src="./image/ICON/checked.png" alt="Бесплатная диагностика" class="advantages__item-img">
+                        <p class="advantages__item-title">
+                            Гарантия до 90 дней
+                        </p>
+                    </li>
+
+                    <li class="advantages__item advantages__item-three">
+                        <img src="./image/ICON/support.png" alt="Бесплатная диагностика" class="advantages__item-img">
+                        <p class="advantages__item-title">
+                            Ремонт за 30 мин
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- advantages -->
+
     </main>
     <!-- MAIN -->
 
@@ -176,13 +209,13 @@
         function nextSlide() {
             // Удаляем класс активного слайда
             slides[currentSlideIndex].classList.remove('hero-active-slide');
-            
+
             // Переходим к следующему слайду
             currentSlideIndex++;
             if (currentSlideIndex >= slides.length) {
                 currentSlideIndex = 0;
             }
-            
+
             // Делаем следующий слайд активным
             slides[currentSlideIndex].classList.add('hero-active-slide');
         }

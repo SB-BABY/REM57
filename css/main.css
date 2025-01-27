@@ -166,7 +166,7 @@ svg * {
   --border: 1px solid var(--color-accent);
   --border-radius: 14px;
   --border-radius-small: 7px;
-  --border-radius-large: 45px;
+  --border-radius-large: 20px;
   --shadow: 0 5px 0 0 var(--color-black);
   --font-family-regular: "OswaldRegular", sans-serif;
   --font-family-bold: "OswaldBold", sans-serif;
@@ -654,4 +654,51 @@ h4,
 
 .hero-active-slide {
   opacity: 1;
+}
+
+.advantages {
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+@media (max-width: 767px) {
+  .advantages__list {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+}
+
+.advantages__item {
+  padding: 40px;
+  background-color: var(--color-dark-alt);
+  border-radius: var(--border-radius-large);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  box-shadow: -4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.advantages__item-img {
+  max-width: 100px;
+  height: auto;
+  display: inline-block;
+}
+.advantages__item-title {
+  font-size: 24px;
+  color: var(--color-light);
+  max-width: 220px;
+  text-transform: uppercase;
+}
+.advantages__item-one, .advantages__item-two, .advantages__item-three {
+  background-image: url("./../image/HERO/1-bg.png"), linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
 }
