@@ -1,0 +1,47 @@
+.footer{
+    padding-bottom: 100px;
+}
+
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 40px;
+    grid-template-areas: 
+        "map info";
+
+    @include mobile{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "info" "map";
+    }
+}
+
+.footer__map-yandex{
+    iframe{
+        width: 100%;
+        height: 500px;
+    }
+}
+
+.footer__map {
+    grid-area: map;
+}
+
+.footer__info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    grid-area: info;
+
+    @include mobile{
+        text-align: center;
+    }
+}
+
+.footer__title{
+    @include title;
+    @include mobile{
+        font-size: 40px;
+    }
+}
